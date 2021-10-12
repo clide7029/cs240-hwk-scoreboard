@@ -1,1 +1,30 @@
-/* Your CSS definitions here */
+html {
+    font-size: 12pt;
+}
+
+ :root {
+    --h1-size: 28pt;
+    --h2-size: 12pt;
+    --white: #ffffff;
+    --black: #000000;
+    --green: rgb(50, 100, 85);
+}
+
+#scoreboard {
+    display: block-inline;
+    width: 400px;
+    background-color: var(--green);
+}
+
+#scoretable {
+    display: inline-table;
+}
+
+#tablehead {}
+
+#tablehead {}
+
+#logo {
+    position: relative;
+    align-items: right-center;
+}
