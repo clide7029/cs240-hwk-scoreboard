@@ -8,43 +8,102 @@
 
 <body>
     <div id="scoreboard">
-        <h1>David Field</h1>
-        <table id="scoretable">
-            <tr id="tablehead">
-                <th></th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>R</th>
-            </tr>
-            <tr class="tablebody">
-                <th>AWAY</th>
-                <td id="A1">0</td>
-                <td id="A2">0</td>
-                <td id="A3">0</td>
-                <td id="A4">0</td>
-                <td id="A5">0</td>
-                <td id="A6">0</td>
-                <td id="A7">0</td>
-                <td id="AR">0</td>
-            </tr>
-            <tr class="tablebody">
-                <th>HOME</th>
-                <td id="H1">0</td>
-                <td id="H2">0</td>
-                <td id="H3">0</td>
-                <td id="H4">0</td>
-                <td id="H5">0</td>
-                <td id="H6">0</td>
-                <td id="H7">0</td>
-                <td id="HR">0</td>
+        <table>
+            <thead><h1>David Copper Field</h1></thead>
+            <tr>
+                <td>
+                    <table class="scoretable">
+                        <tr id="tablehead">
+                            <th></th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>R</th>
+                        </tr>
+                        <tr class="tablebody">
+                            <th>AWAY</th>
+                            <td id="A1">0</td>
+                            <td id="A2">0</td>
+                            <td id="A3">0</td>
+                            <td id="A4">0</td>
+                            <td id="A5">0</td>
+                            <td id="A6">0</td>
+                            <td id="A7">0</td>
+                            <td id="A8">0</td>
+                        </tr>
+                        <tr class="tablebody">
+                            <th>HOME</th>
+                            <td id="H1">0</td>
+                            <td id="H2">0</td>
+                            <td id="H3">0</td>
+                            <td id="H4">0</td>
+                            <td id="H5">0</td>
+                            <td id="H6">0</td>
+                            <td id="H7">0</td>
+                            <td id="H8">0</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <img id="logo" src="./images/ups.png" height="120px">
+                </td>
             </tr>
         </table>
-        <img id="logo" src="./images/ups.png" height="120px">
+    </div>
+
+    <div id="controller">
+        <table id="controlboard">
+            <thead>
+                <h1>Control Panel</h1>
+            </thead>
+            <tr>
+                <td><h2>Who:</h2></td>
+                <td>
+                    <select name="team">
+                        <option value="A">Away</option>
+                        <option value="H">Home</option>
+                    </select>
+                </td>
+            <td><h2>Inning:</h2></td>
+            <td>
+                <select name="inning">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Runs:</h2>
+            </td>
+            <td>
+                <span>
+                    <button id="plus" onclick=plusRuns()>+</button>
+                    <button id="minus">-</button>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Sound:</h2>
+            </td>
+            <td>
+                <span>
+                    <button id="sound">n</button>
+                    <button id="key">p</button>
+                </span>
+            </td>
+        </tr>
+    </table>
     </div>
 
     <script src="app.js"></script>
