@@ -5,21 +5,24 @@
 
 
 var runs = {};
-var who = document.querySelector("team");
-var inn = document.querySelector("inning");
+// var who = document.querySelector("team");
+// var inn = document.querySelector("inning");
 
-for(let i = 1; i<9; i++){
+for (let i = 1; i < 9; i++) {
     let a = "A" + i;
-    let b = "B" + i;
-    let nodeA = document.querySelector("#"+a);
-    let nodeB = document.querySelector("#"+b);
+    let h = "H" + i;
+    let nodeA = document.querySelector("#" + a);
+    let nodeH = document.querySelector("#" + h);
 
     runs[a] = nodeA;
-    runs[b] = nodeB;
+    runs[h] = nodeH;
 }
 
 function getBox() {
-    return who.value + inn.value;
+    let who = document.getElementById("team").value;
+    let inn = document.getElementById("inning").value;
+    console.log(who + inn);
+    return who + inn;
 }
 
 function plusRuns() {
@@ -27,7 +30,13 @@ function plusRuns() {
     let cur = runs[box].innerHTML;
     let n = parseInt(cur) + 1;
     runs[box].innerHTML = n;
+}
 
+function minusRuns() {
+    let box = getBox();
+    let cur = runs[box].innerHTML;
+    let n = parseInt(cur) - 1;
+    runs[box].innerHTML = n;
 }
 
 // let plus = document.querySelector("#plus");
@@ -36,6 +45,6 @@ function plusRuns() {
 // plus.addEventListener("onclick", () => {
 //     let box = getBox();
 //     console.log(box);
-    
+
 //     plusRuns();
 // });

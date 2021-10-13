@@ -9,7 +9,9 @@
 <body>
     <div id="scoreboard">
         <table>
-            <thead><h1>David Copper Field</h1></thead>
+            <thead>
+                <h1>David Copper Field</h1>
+            </thead>
             <tr>
                 <td>
                     <table class="scoretable">
@@ -61,49 +63,53 @@
                 <h1>Control Panel</h1>
             </thead>
             <tr>
-                <td><h2>Who:</h2></td>
                 <td>
-                    <select name="team">
+                    <h2>Who:</h2>
+                </td>
+                <td>
+                    <select id="team">
                         <option value="A">Away</option>
                         <option value="H">Home</option>
                     </select>
                 </td>
-            <td><h2>Inning:</h2></td>
-            <td>
-                <select name="inning">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h2>Runs:</h2>
-            </td>
-            <td>
-                <span>
+                <td>
+                    <h2>Inning:</h2>
+                </td>
+                <td>
+                    <select id="inning">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                  </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Runs:</h2>
+                </td>
+                <td>
+                    <span>
                     <button id="plus" onclick=plusRuns()>+</button>
-                    <button id="minus">-</button>
+                    <button id="minus" onclick=minusRuns()>-</button>
                 </span>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <h2>Sound:</h2>
-            </td>
-            <td>
-                <span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Sound:</h2>
+                </td>
+                <td>
+                    <span>
                     <button id="sound">n</button>
                     <button id="key">p</button>
                 </span>
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <script src="app.js"></script>
