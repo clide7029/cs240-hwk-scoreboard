@@ -1,78 +1,94 @@
 html {
-  font-size: 12pt;
+    font-size: 12pt;
 }
 
 :root {
-  --h1-size: 28pt;
-  --h2-size: 12pt;
-  --font: arial;
-  --green: rgb(50, 100, 85);
+    --h1-size: 28pt;
+    --p-size: 12pt;
+    --font: arial;
+    --green: rgb(50, 100, 85);
 }
 
 h1 {
-  color: white;
-  size: var(--h1-size);
-  font-family: var(--font);
-  position: relative;
-  text-align: center;
+    color: white;
+    size: var(--h1-size);
+    font-family: var(--font);
+    position: relative;
+    text-align: center;
 }
 
-h2 {
-  color: white;
-  size: var(--h2-size);
-  font-family: var(--font);
-  text-align: center;
+p {
+    color: white;
+    size: var(--p-size);
+    font-family: var(--font);
+    text-align: center;
 }
 
 #scoreboard {
-  display: block-inline;
-  width: 400px;
-  background-color: var(--green);
+    display: block-inline;
+    width: 400px;
+    background-color: var(--green);
 }
 
 .scoretable {
-  display: inline-table;
-
-  /* border-collapse: collapse; */
+    display: inline-table;
+    /* border-collapse: collapse; */
 }
 
 #tablehead {
-  color: white;
+    color: white;
 }
 
 th {
-  color: white;
-  font-family: var(--font);
-  font-weight: bold;
-  size: var(--h2-size);
+    color: white;
+    font-family: var(--font);
+    font-weight: bold;
+    size: var(--p-size);
 }
 
 .tablebody td {
-  border-width: 3px;
-  border-color: black;
-  border: solid;
-  text-align: center;
-  padding: 5px;
+    border-width: 3px;
+    border-color: black;
+    border: solid;
+    text-align: center;
+    padding: 5px;
 }
 
-.tablebody #HR,
-#AR {
-  border: solid;
-  border-color: white;
-  border-width: 3px;
-  text-align: center;
-  padding: 5px;
+.tablebody #A8,
+#H8 {
+    border: solid;
+    border-color: white;
+    border-width: 3px;
+    text-align: center;
+    padding: 5px;
 }
 
 #logo {
-  position: relative;
-  align-items: right-center;
+    position: relative;
+    align-items: right-center;
 }
 
 #controller {
-  background-color: black;
-  border-style: outset;
-  border-radius: 10px;
-  padding: 20px;
-  width: fit-content;
+    background-color: black;
+    border-style: outset;
+    border-radius: 10px;
+    padding: 20px;
+    width: fit-content;
+}
+
+table.controlboard {
+    display: table-cell;
+    /* height: 0.1%;
+    white-space: nowrap; */
+    /* border-spacing: 0;
+    border-collapse: collapse; */
+}
+
+#plus,
+#minus,
+#team,
+#inning {
+    color: white;
+    font-family: var(--font);
+    size: var(--p-size);
 }

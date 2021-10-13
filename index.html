@@ -58,13 +58,13 @@
     </div>
 
     <div id="controller">
-        <table id="controlboard">
+        <table class="controlboard">
             <thead>
                 <h1>Control Panel</h1>
             </thead>
-            <tr>
+            <tr class="controlbody">
                 <td>
-                    <h2>Who:</h2>
+                    <p>Who:</p>
                 </td>
                 <td>
                     <select id="team">
@@ -73,7 +73,7 @@
                     </select>
                 </td>
                 <td>
-                    <h2>Inning:</h2>
+                    <p>Inning:</p>
                 </td>
                 <td>
                     <select id="inning">
@@ -87,9 +87,9 @@
                   </select>
                 </td>
             </tr>
-            <tr>
+            <tr class="controlbody">
                 <td>
-                    <h2>Runs:</h2>
+                    <p>Runs:</p>
                 </td>
                 <td>
                     <span>
@@ -98,14 +98,14 @@
                 </span>
                 </td>
             </tr>
-            <tr>
+            <tr class="controlbody">
                 <td>
-                    <h2>Sound:</h2>
+                    <p>Sound:</p>
                 </td>
                 <td>
                     <span>
-                    <button id="sound">♫</button>
-                    <button id="key" onclick=chickenSong()>🎹</button>
+                    <button id="sound" onclick=randomSong();>♫</button>
+                    <button id="key" onclick=chickenSong();>🎹</button>
                 </span>
                 </td>
             </tr>
