@@ -5,6 +5,9 @@
 
 
 var runs = {};
+var runA = 0;
+var runH = 0;
+
 // var who = document.querySelector("team");
 // var inn = document.querySelector("inning");
 
@@ -25,26 +28,35 @@ function getBox() {
     return who + inn;
 }
 
+function updateRuns(box, op) {
+    let team = box[0];
+    box = team + '8';
+    let cur = runs[box].innerHTML;
+    let n;
+    if(op){
+        n = parseInt(cur) + 1;
+    }else{
+        n = parseInt(cur) - 1;
+    }
+    runs[box].innerHTML = n;
+}
+
 function plusRuns() {
     let box = getBox();
     let cur = runs[box].innerHTML;
     let n = parseInt(cur) + 1;
     runs[box].innerHTML = n;
+    updateRuns(box, 1);
 }
 
 function minusRuns() {
     let box = getBox();
-    let cur = runs[box].innerHTML;
-    let n = parseInt(cur) - 1;
+    let n = parseInt(runs[box].innerHTML) - 1;
     runs[box].innerHTML = n;
+    updateRuns(box, 0);
 }
 
-// let plus = document.querySelector("#plus");
-// let minus = document.querySelector("#minus");
-
-// plus.addEventListener("onclick", () => {
-//     let box = getBox();
-//     console.log(box);
-
-//     plusRuns();
-// });
+function chickenSong() {
+    var song = new Audio("./sounds/chickendance.mp3");
+    song.play();
+}
