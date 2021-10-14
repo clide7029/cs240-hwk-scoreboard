@@ -13,6 +13,7 @@ h1 {
     color: white;
     size: var(--h1-size);
     font-family: var(--font);
+    padding: 5px;
     position: relative;
     text-align: center;
 }
@@ -28,11 +29,6 @@ p {
     display: block-inline;
     width: 400px;
     background-color: var(--green);
-}
-
-.scoretable {
-    display: inline-table;
-    /* border-collapse: collapse; */
 }
 
 #tablehead {
@@ -76,19 +72,11 @@ th {
     width: fit-content;
 }
 
-table.controlboard {
-    display: table-cell;
-    /* height: 0.1%;
-    white-space: nowrap; */
-    /* border-spacing: 0;
-    border-collapse: collapse; */
-}
-
 #plus,
 #minus,
 #team,
 #inning {
-    color: white;
+    color: black;
     font-family: var(--font);
     size: var(--p-size);
 }
